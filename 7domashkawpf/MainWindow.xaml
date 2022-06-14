@@ -1,0 +1,23 @@
+﻿<Window x:Class="_7domashkawpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_7domashkawpf"
+      mc:Ignorable="d"
+        Title="Worker List" Height="905" Width="1305" WindowStyle="ThreeDBorderWindow" FontFamily="Cooper Black">
+    <Grid>
+        <DataGrid x:Name="workerlist" Loaded="workerlist_Loaded" Background="Azure"  AutoGenerateColumns="False" HorizontalAlignment="Center" Width="1306" Height="850" VerticalAlignment="Center" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Path=ID}" IsReadOnly="True" Width="150"/>
+                <DataGridTextColumn Header="Date" Binding="{Binding Path=Data}" IsReadOnly="True" Width="150"/>
+                <DataGridTextColumn Header="F.I.O" Binding="{Binding Path=FullName}" IsReadOnly="False" Width="500"/>
+                <DataGridTextColumn Header="Age" Binding="{Binding Path=Age}" IsReadOnly="False" Width="50"/>
+                <DataGridTextColumn Header="Hight" Binding="{Binding Path=Hight}" IsReadOnly="False" Width="60"/>
+                <DataGridTextColumn Header="Birthday" Binding="{Binding Path=Birthday}" IsReadOnly="False"  Width="160"/>
+                <DataGridTextColumn Header="Birthplace" Binding="{Binding Path=City}" IsReadOnly="False" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>
